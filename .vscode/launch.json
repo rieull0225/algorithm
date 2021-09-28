@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch bj1011",
+            "request": "launch",
+            "mainClass": "bj1011",
+            "projectName": "java_1e78574f"
+        },
+        {
+            "type": "java",
             "name": "Launch Algo1_구미_5반_박민준",
             "request": "launch",
             "mainClass": "Algo1_구미_5반_박민준",
