@@ -1,9 +1,8 @@
-package Testing;
 
 import java.util.*;
 import java.io.*;
 
-public class Main {
+public class bj1010 {
 
     static int[][] dp;
         public static void main(String[] args) throws IOException {
