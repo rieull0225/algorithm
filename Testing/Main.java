@@ -5,29 +5,42 @@ import java.io.*;
 
 public class Main {
 
-    static int[][] dp;
         public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st;
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int n = Integer.parseInt(br.readLine());
-        dp = new int[31][31];
+        int n = Integer.parseInt(st.nextToken());
+        int c = Integer.parseInt(st.nextToken());
+        int[] arr = new int[n];
 
+        for(int i = 0 ; i < n ; ++i) arr[i] = Integer.parseInt(br.readLine());
 
-        for(int i = 0 ; i < n ; ++i){
-            st = new StringTokenizer(br.readLine());
-            int a = Integer.parseInt(st.nextToken());
-            int b = Integer.parseInt(st.nextToken());
+        Arrays.sort(arr);
 
-            System.out.println(Comb(b,a));
+        int start = 1;
+        int end = arr[n-1] - arr[0]; 
+        int ans = 0;
+        while(start <= end){
+            int mid = (start + end)/ 2;
+            int prev = arr[0];
+            int cnt = 1;
+            for(int i = 1 ; i < n ; ++i){
+                if(arr[i] - prev >= mid){
+                    cnt++;
+                    prev = arr[i];
+                }
+            }
+
+            if(cnt >= c){
+                ans = mid;
+                start = mid+1;
+            }else{
+                end = mid - 1;
+            }
         }
-    }
-    
-    static int Comb(int n, int r){
-        if(dp[n][r] > 0) return dp[n][r];
 
-        if(n == r || r == 0) return dp[n][r] = 1;
+        System.out.println(ans);
 
-        return dp[n][r] = Comb(n-1,r-1) + Comb(n-1,r);
-    }
+        }
+
 }

@@ -12,7 +12,6 @@ public class bj1931 {
 		int[] before = new int[n+1];
 		int[] after = new int[n+1];
 		int max = 0;
-		int temp = 0;
 
 		before[0] = Integer.parseInt(br.readLine());
 

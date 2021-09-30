@@ -15,7 +15,7 @@ public class hwalgo18_구미_5반_박민준{
             cost[i][green] = sc.nextInt();
             cost[i][blue] = sc.nextInt();
         }
-
+        sc.close();
         for(int i = 1 ; i < n ; ++i){
             cost[i][red] += Math.min(cost[i-1][green], cost[i-1][blue]);
             cost[i][green] += Math.min(cost[i-1][red], cost[i-1][blue]);

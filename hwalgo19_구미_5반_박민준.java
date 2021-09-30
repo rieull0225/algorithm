@@ -40,6 +40,7 @@ public class hwalgo19_구미_5반_박민준 {
 			long sum = 0;
 			for(int i=0; i<arr.size(); i++) sum += arr.get(i).value;
 			System.out.println("#"+test_case+" "+sum);
+			sc.close();
 		}
 	}
 	

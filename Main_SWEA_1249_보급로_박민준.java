@@ -1,6 +1,6 @@
 import java.util.*;
 import java.io.*;
-public class Solution {
+public class Main_SWEA_1249_보급로_박민준 {
 
 	static int[] dx = {1,0,-1,0};
 	static int[] dy = {0,-1,0,1};
