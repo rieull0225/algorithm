@@ -1,5 +1,4 @@
 
-import java.util.*;
 import java.io.*;
 
 public class bj9020 {
@@ -9,7 +8,7 @@ public class bj9020 {
 
         int n = Integer.parseInt(br.readLine());
         
-        for(int i = 0 ; i < n ; ++i){
+        for(int i = 0 ; i < n ; ++i){ 
 
             int target = Integer.parseInt(br.readLine());
             int a = target / 2;
