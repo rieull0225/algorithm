@@ -105,8 +105,5 @@ public class Main_BJ_17143_낚시왕_박민준{
         }
 
         map = temp.clone();
-
     }
-
-
 }
