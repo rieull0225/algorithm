@@ -5,32 +5,37 @@ import java.util.*;
 
 public class Main {
 
-	static int n;
-	static int[] pop;
+	static int n,cnt;
 	static int[][] map;
-
-
+	static boolean[] visited;
     public static void main(String[] args) throws Exception {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 
+		cnt = 0;
 		n = Integer.parseInt(st.nextToken());
-		st = new StringTokenizer(br.readLine());
-
-		pop = new int[n];
+		int k = Integer.parseInt(br.readLine());
 		map = new int[n][n];
 
-		for(int i = 0 ; i < n ; ++i) pop[i] = Integer.parseInt(st.nextToken());
-		for(int i = 0 ; i < n ; ++i){
+		for(int i = 0 ; i < k ; ++i){
 			st = new StringTokenizer(br.readLine());
-
-
+			int x = Integer.parseInt(st.nextToken());
+			int y = Integer.parseInt(st.nextToken());
+			map[x][y] = map[y][x] = 1;
 		}
 		
-
+		dfs(0);
+	
 
 	}
 
 
+	static void dfs(int val){
+		if(visited[val]) return;
+		visited[val] = true;
+
+		for()
+
+	}
 }
